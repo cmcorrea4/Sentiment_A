@@ -13,8 +13,8 @@ with st.expander('Analyze Text'):
         st.write('Subjectivity: ', round(blob.sentiment.subjectivity,2))
         x=round(blob.sentiment.polarity,2)
         if x >= 0.5:
-            return 'Positive'
+            st.write( 'Es un sentimiento Positivo')
         elif x <= -0.5:
-            return 'Negative'
+            st.write( 'Es un sentimiento Negativo')
         else:
-            return 'Neutral'
+            st.write( 'Es un sentimiento Neutral')
