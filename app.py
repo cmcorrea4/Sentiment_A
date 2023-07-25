@@ -4,17 +4,17 @@ import streamlit as st
 
 
 
-st.header('Sentiment Analysis')
-with st.expander('Analyze Text'):
-    text = st.text_input('Text here: ')
+st.header('Análisis de Sentimiento')
+with st.expander('Analizar texto'):
+    text = st.text_input('Escribe por favor: ')
     if text:
         blob = TextBlob(text)
         st.write('Polarity: ', round(blob.sentiment.polarity,2))
         st.write('Subjectivity: ', round(blob.sentiment.subjectivity,2))
         x=round(blob.sentiment.polarity,2)
         if x >= 0.5:
-            st.write( 'Es un sentimiento Positivo')
+            st.write( 'Es un sentimiento Positivo',icon=":blush:")
         elif x <= -0.5:
-            st.write( 'Es un sentimiento Negativo')
+            st.write( 'Es un sentimiento Negativo',icon=':pensive:')
         else:
-            st.write( 'Es un sentimiento Neutral')
+            st.write( 'Es un sentimiento Neutral',icon=':neutral_face:')
