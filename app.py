@@ -16,5 +16,6 @@ with st.expander('Analizar texto'):
             st.write( 'Es un sentimiento Positivo',icon="⚠️")
         elif x <= -0.5:
             st.write( 'Es un sentimiento Negativo',icon=':pensive:')
+            st.warning('This is a warning', icon="⚠️")
         else:
             st.write( 'Es un sentimiento Neutral',icon=':neutral_face:')
