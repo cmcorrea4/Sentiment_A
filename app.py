@@ -1,9 +1,14 @@
 from textblob import TextBlob
 import pandas as pd
 import streamlit as st
+from PIL import Image
+
+
 
 from googletrans import Translator
 
+image = Image.open('emoticones.jpg')
+st.image(image)
 translator = Translator()
 st.header('Análisis de Sentimiento')
 with st.expander('Analizar texto'):
