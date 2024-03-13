@@ -2,7 +2,6 @@ from textblob import TextBlob
 import pandas as pd
 import streamlit as st
 from PIL import Image
-
 from googletrans import Translator
 
 st.title('Análisis de Sentimiento')
